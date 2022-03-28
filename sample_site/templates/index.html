@@ -1,0 +1,34 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        font-family: "Rubik", "sans-serif";
+    }
+
+    div {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    h1 {
+        color: red;
+        font-size: 40pt;
+    }
+
+    p {
+        font-size: 24pt;
+    }
+</style>
+
+<div>
+    <h1>Welcome!</h1><br>
+    <p>The last visitor has left a message:</p>
+    <p>{{ lastMessage }}</p>
+    <br>
+    <p>What message do you want to leave for the next visitor?</p>
+<form action = "{{ url_for('index')}}" method = "post">
+    <p><input type="text" name="leftmessage"></p>
+    <button type="submit">submit</button>
+</form>
+</div>
